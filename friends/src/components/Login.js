@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import '../App.css';
 
 class Login extends React.Component {
   state = {
@@ -22,6 +23,7 @@ class Login extends React.Component {
     e.preventDefault();
     axios.post('http://localhost:5000/api/login', this.state.credentials)
     .then(req => {
+      // console.log(req)
       localStorage.setItem("token", req.data.payload);
       this.props.history.push("/protected");
     })
@@ -32,7 +34,7 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='form'>
         <form onSubmit={this.login}>
           <input
             placeholder='username'

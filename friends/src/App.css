@@ -1,5 +1,84 @@
-.App {
+
+body {
+  background-color: grey;
   text-align: center;
+  font-size: 2rem;
 }
 
+.friends {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+}
 
+.friend {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: bisque;
+  width: 20%;
+  border-radius: 20px;
+  margin: 2%;
+  padding: 3%;
+  height: 20vh;
+  font-size: 1.2rem;
+}
+
+.friend:hover {
+  color: white;
+  background: rgb(6, 105, 84);
+  transition: .5s;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  background: bisque;
+  border-radius: 20px;
+  width: 7%;
+  padding: 1%;
+  font-size: 1rem;
+  margin: 4%;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  color: white;
+}
+
+.nav a:hover {
+  color: white;
+  background: black;
+  transition: .5s;
+}
+
+.form button {
+  padding: .5%;
+  width: 5%;
+  border-radius: 20px;
+}
+
+.form button:hover {
+  color: white;
+  background-color: green;
+  transition: .5s;
+}
+
+.form input {
+  width: 10%;
+  padding: 1%;
+}
+
+.form input:hover {
+  background-color: powderblue;
+  transition: .3s;
+}

@@ -6,20 +6,15 @@ import FriendsList from './components/FriendsList';
 import PrivateRoute from './components/PrivateRoute'
 
 function App() {
+
   return (
     <Router>
     <div className="App">
-      <ul>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        {/* <li>
-          <Link to="#" onClick={logout}>Logout</Link>
-        </li> */}
-        <li>
-          <Link to="/protected">Protected Page</Link>
-        </li>
-      </ul>
+      <div className="nav">
+        <Link to="/login">Login</Link>
+        <h1>Friends List</h1>
+        <Link to="/protected">Protected Page</Link>
+      </div>
       <Switch>
         <PrivateRoute exact path="/protected" component={FriendsList} />
         <Route path="/login" component={Login} />

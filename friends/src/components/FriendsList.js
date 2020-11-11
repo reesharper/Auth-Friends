@@ -1,5 +1,6 @@
 import React from 'react';
-import axios from 'axios';
+import '../App.css';
+import { axiosWithAuth } from './../utils/axiosWithAuth';
 
 class FriendsList extends React.Component {
 
@@ -12,7 +13,8 @@ class FriendsList extends React.Component {
   }
 
   getData = () => {
-    axios.get("http://localhost:5000/api/friends")
+    axiosWithAuth()
+    .get("/friends")
       .then(req => {
         this.setState({
           friends: req.data

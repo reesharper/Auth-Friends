@@ -28,6 +28,7 @@ body {
   padding: 3%;
   height: 20vh;
   font-size: 1.2rem;
+  transition: .5s;
 }
 
 .friend:hover {
